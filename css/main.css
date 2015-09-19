@@ -1,0 +1,271 @@
+body {
+    background-image: url(../imgs/backgroundgradient.png);
+    background-color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+#container {
+	position: relative;
+}
+/*-----------------
+| Nav
+-------------------*/
+
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+/*    background: rgba(255, 255, 255, 0.28);*/
+    width: 100%;
+    /*margin-left: 100px;*/
+}
+
+li {
+    display:inline-block;
+    float: left;
+}
+
+/*Style for menu links*/
+li a {
+    display:block;
+    min-width:140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.28);
+
+}
+
+li:hover a {
+    background: #C0278F;
+}
+
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+li:hover ul a:hover {
+    background: #19c589;
+    color: #fff;
+}
+
+li ul {
+    display: none;
+}
+
+\
+li ul li {
+    display: block;
+    float: none;
+}
+
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+    display: block;
+}
+
+.show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: #19c589;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+.clearfix:after .clearfix:before { 
+    content: "."; 
+    display: block; 
+    clear: both; 
+    visibility: hidden; 
+    line-height: 0; 
+    height: 0; 
+}
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+
+
+#frontpage {
+	/*border-style: solid;
+	border-width: 5px;*/
+	width: 900px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+    /*margin-top: 60px;*/
+    padding: 70px;
+	/*color: black*/
+		}
+
+	.boxes {
+		width: 240px;
+		height: 240px;
+		border-style: solid;
+		border-width: 5px;
+		float: left;
+		/*position: fixed;*/
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	.logo {
+		display: block;
+		margin: auto;
+		padding: 20px; 
+	}
+
+	h2 {
+		text-align: center;
+        color: #fff;
+	}
+
+	.printableresume {
+		text-align: center;
+		display: block;
+        text-decoration: none;
+        color: purple;
+	}
+
+/*----------------------
+| Footer
+---------------------*/
+
+footer {
+    background-color: rgba(255, 255, 255, 0.28);
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+}
+
+footer p {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    clear: both;
+    padding: 25px;
+    color: #fff;
+}
+
+
+
+/*--------------------
+| Gallery Lightbox
+---------------------*/
+
+#lightbox {
+    padding: 25px;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+#lightbox .images img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    border: solid #fff;
+
+}
+#lightbox .light, #lightbox .dark {
+    display: none;
+    position: fixed;
+    left:0px; top: 0px; bottom: 0px; right: 0px;
+
+    margin: auto;
+
+}
+#lightbox .light {
+    background-color: #000;
+    width: 600px; height:420px; /* you may change the size here*/
+    text-align: center;
+    padding: 15px;
+    
+}
+#lightbox .dark {
+    background-color: #000;
+    opacity: .7;
+}
+#lightbox .light img {
+    display: block;
+    margin: 0px 0px 15px;
+}
+
+/*----------------
+| Contact Page
+-----------------*/
+
+#rollovers {
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------
+|   Resume
+-------------------*/
+
+#resume {
+    margin-top: 100px;
+}
+
+.resume_photo {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 60%;
+}
+
+/*----------------
+| Media Query for Nav
+----------------*/
+
+@media screen and (max-width : 760px){
+ 
+    ul {
+        position: static;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+  
+    ul li, li a {
+        width: 100%;
+    }
+
+    .show-menu {
+        display:block;
+    }
+}
