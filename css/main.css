@@ -205,7 +205,8 @@ footer p {
 }
 #lightbox .light {
     background-color: #000;
-    width: 600px; height:420px; /* you may change the size here*/
+    width: 960px; 
+    height: 650px; /* you may change the size here*/
     text-align: center;
     padding: 15px;
     
@@ -269,3 +270,27 @@ footer p {
         display:block;
     }
 }
+
+
+
+
+
+
+
+
+#sliding {
+                width: 600px; 
+                height: 512px; 
+                border: solid 2px #fff;
+                margin: auto;
+
+                position: relative;
+
+                overflow: hidden;
+            }
+
+            #sliding img {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
