@@ -1,26 +1,49 @@
 body {
     background-image: url(../imgs/backgroundgradient.png);
-    background-color: white;
     background-attachment: fixed;
     background-size: cover;
-    background-position: right top;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 #container {
 	position: relative;
 }
+
+/*#multiplebg {
+    background-color: #9600EA;
+    border: solid 5px #A600FF;
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background-position: center center;
+    background-size: cover;
+    float: bottom;
+
+}
+
+.logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 361px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}*/
+
 /*-----------------
 | Nav
 -------------------*/
 
 ul {
     list-style-type:none;
-    margin:0;
+    margin: 18px;
     padding:0;
 /*    background: rgba(255, 255, 255, 0.28);*/
     width: 100%;
-    /*margin-left: 100px;*/
 }
 
 li {
@@ -113,47 +136,39 @@ html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
 
 
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin: auto;
+  }
 
-#frontpage {
-	/*border-style: solid;
-	border-width: 5px;*/
-	width: 900px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-    /*margin-top: 60px;*/
-    padding: 70px;
-	/*color: black*/
-		}
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
 
-	.boxes {
-		width: 240px;
-		height: 240px;
-		border-style: solid;
-		border-width: 5px;
-		float: left;
-		/*position: fixed;*/
-		margin-left: auto;
-		margin-right: auto;
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
 
-	}
-	.logo {
-		display: block;
-		margin: auto;
-		padding: 20px; 
-	}
-
-	h2 {
-		text-align: center;
-        color: #fff;
-	}
-
-	.printableresume {
-		text-align: center;
-		display: block;
-        text-decoration: none;
-        color: purple;
-	}
+.rslides img {
+  display: block;
+  height: auto;
+  margin: auto;
+  width: 70%;
+  padding: 50px;
+}
 
 /*----------------------
 | Footer
@@ -235,11 +250,31 @@ footer p {
 |   Resume
 -------------------*/
 
+h2 {
+    color: #9600EA;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: helvetica;
+
+}
+
+.printableresume {
+    color: #9600EA;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: helvetica;
+}
+
 #resume {
     margin-top: 100px;
 }
 
 .resume_photo {
+    display: block;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -271,26 +306,37 @@ footer p {
     }
 }
 
+section {
+    /*border-top: solid 10px red;*/
+    /*border-bottom: solid 10px red;*/
+    height: 600px;
+    /*margin-bottom: 25px;*/
+    background-color: white;
 
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 
+    padding: 10px;
+}
 
-
-
-
+section:nth-of-type(3n+1) { background-image: url(../imgs/bgWIP1.jpg); }
+section:nth-of-type(3n+2) { background-image: url(..//imgs/bgWIP2.jpg); }
+section:nth-of-type(3n+3) { background-image: url(../imgs/bgWIP3.jpg); }
 
 #sliding {
-                width: 600px; 
-                height: 512px; 
-                border: solid 2px #fff;
-                margin: auto;
+    width: 600px; 
+    height: 512px; 
+    border: solid 2px #fff;
+    margin: auto;
 
-                position: relative;
+    position: relative;
 
-                overflow: hidden;
-            }
+    overflow: hidden;
+}
 
-            #sliding img {
-                position: absolute;
-                left: 0px;
-                top: 0px;
-            }
+#sliding img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
