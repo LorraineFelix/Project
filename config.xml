@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.lorraine.felix"
+        versionCode = "1" 
+        version     = "1.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Lorraine Felix Portfolio</name>
+
+    <description>
+        A sample app for my online portfolio. 
+    </description>
+
+    <author href="http://lrainfx.wix.com/portfolio" email="lrainFX@gmail.com">
+        Lorraine Felix 
+    </author>
+
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+
+</widget>

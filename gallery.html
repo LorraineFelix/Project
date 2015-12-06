@@ -3,11 +3,12 @@
 	<head>
 		<title>Portfolio</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 
 	<body>
 		<div id="container">
-			<img class="logo"	src="imgs/LFX-logo2.png" height="210" width="531">
+			<img class="logo"	src="imgs/LFX-logo2.png">
 
 				<div class="mainmenu">
 					<label for="show-menu" class="show-menu">Show Menu</label>
@@ -19,36 +20,50 @@
 						<li><a href="resume.html">Resume</a></li>
 					</ul>
 				</div>
-
-				<div id="lightbox">
-					<div class="images">
-						<img src="imgs/slideshow/_1.jpg">
-						<img src="imgs/slideshow/_10.jpg">
-						<img src="imgs/slideshow/_11.jpg">
-						<img src="imgs/slideshow/_12.jpg">
-						<img src="imgs/slideshow/_13.jpg">
-						<img src="imgs/slideshow/_14.jpg">
-						<img src="imgs/slideshow/_15.jpg">
-						<img src="imgs/slideshow/_16.jpg">
-						<img src="imgs/slideshow/_17.jpg">
-					</div>
-
-				<!-- put your image into '#'  -->
-				
-					<div class="dark"></div>
-					<div class="light">
-						<img src="imgs/slideshow/_1.jpg">
-						<button class="close">CLOSE</button>
-					</div>
+				<div>
+					<ul class="rslides">
+						<li><img src="imgs/slideshow/1slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/2slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/3slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/4slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/5slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/6slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/7slideshow.jpg"></li>
+						<li><img src="imgs/slideshow/8slideshow.jpg"></li>
+					</ul>
 				</div>
-		</div>
-
+			</div>
+			<section id="section1"><h1></h1></section>
+			<section id="section2"><h1></h1></section>
+			<section id="section3"><h1></h1></section>
 		<footer>
 			<p> &copy; Lorraine Felix. 2015. All Rights Reserved.</p>
 		</footer>
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="js/author.js"></script>
-
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			$(function() {
+		    $(".rslides").responsiveSlides({
+			  auto: true,             // Boolean: Animate automatically, true or false
+			  speed: 500,            // Integer: Speed of the transition, in milliseconds
+			  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+			  pager: false,           // Boolean: Show pager, true or false
+			  nav: false,             // Boolean: Show navigation, true or false
+			  random: false,          // Boolean: Randomize the order of the slides, true or false
+			  pause: false,           // Boolean: Pause on hover, true or false
+			  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+			  prevText: "Previous",   // String: Text for the "previous" button
+			  nextText: "Next",       // String: Text for the "next" button
+			  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
+			  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+			  manualControls: "",     // Selector: Declare custom pager navigation
+			  namespace: "rslides",   // String: Change the default namespace used
+			  before: function(){},   // Function: Before callback
+			  after: function(){}     // Function: After callback
+			});
+		  });
+		</script>
 	</body>
 </html>
